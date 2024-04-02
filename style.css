@@ -1,0 +1,22 @@
+#OverlayDiv {
+	position: fixed;
+	z-index: 1;
+}
+#ConsoleDiv {
+	position: relative;
+	z-index: -1;
+}
+@font-face {
+	font-family: Karma;
+	src: url(Karma.ttf);
+}
+html {
+	background-color: black;
+}
+h1 {
+	font-family: Karma;
+	color: green;
+}
+#CrtEffectButton:hover {
+	color: green;
+}
