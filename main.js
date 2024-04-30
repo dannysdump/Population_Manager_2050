@@ -1,5 +1,7 @@
 window.onload = function() {
-	let IntroText = ["> Welcome, User", "> You are about to enter a simuation of the terrors of overpopulation.", "> Do you wish to proceed?", "> <a href=\"/index.html\">Here</a>"]
+	let LinkYes = "> <a href=\"/index.html\">Here</a>";
+	let ButtonYes = "> <a href=\"/index.html\"><input type=\"button\" name=\"link\" value=\"Yes\"></a>";
+	let IntroText = ["> Welcome, User", "> You are about to enter a simulation of the terrors of overpopulation.", "> Do you wish to proceed?", "> Y/N"]
 	const ParentDiv = document.getElementById("ConsoleDiv");
 	const CrtDiv = document.getElementById("CrtEffectButton");
 	const Overlay = document.getElementById("OverlayDiv");
@@ -77,4 +79,12 @@ window.onload = function() {
 	//};
 	
 	SmoothTypeArray(IntroText, 50, 2);
+
+	document.onkeydown = function (e) {
+		switch (e.key)
+		{
+			case "y": window.location.href = "/index.html"; break;
+			case "n": SmoothTypeText("Are you sure you don't want to?", 50); break;
+		}
+	};
 }
